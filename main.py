@@ -60,7 +60,7 @@ def main():
     # wait for connect to start it's rest-api
     wait_for_connect()
 
-    for p in connect_configs:
+    for p in connector_configs:
         with open(os.path.join(connector_configs_path, p)) as f:
             c = json.load(f)
         create_kafka_connector(c)
